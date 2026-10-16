@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="An unofficial concept prototype exploring a more connected digital experience for The Worship Center.">
+  <title>TWC Connect — Concept Prototype</title>
+  <style>
+:root{--paper:#f5f3ed;--ink:#222b27;--muted:#69716a;--green:#354d40;--green2:#dce5d9;--line:#d8d9d0;--gold:#d7a75f;--white:#fffefa;--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.notice{background:#26382e;color:#f4f3eb;text-align:center;padding:9px 14px;font-size:10px;letter-spacing:.14em;font-weight:700}.notice-dot{display:inline-block;width:6px;height:6px;background:#d6b36d;border-radius:50%;margin:0 8px 1px 0}.site-header{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;border-bottom:1px solid var(--line);gap:24px}.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}.brand-mark{display:grid;place-items:center;width:39px;height:39px;background:var(--green);color:white;font-family:var(--serif);font-size:23px;border-radius:50%}.brand strong{display:block;font-size:15px;letter-spacing:.07em}.brand em{font-style:normal;color:#788476;font-weight:500}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.03em}.nav-links{display:flex;align-items:center;gap:27px;font-size:12px;font-weight:650}.nav-links>a:not(.nav-cta):hover,.text-link:hover{color:#6b806e}.nav-cta{background:var(--green);color:white;padding:12px 16px;border-radius:3px}.menu-toggle{display:none;border:1px solid var(--line);background:transparent;padding:9px 12px;border-radius:3px}.hero{display:grid;grid-template-columns:1.02fr .98fr;min-height:590px;padding:0 6vw;align-items:center;gap:5vw;overflow:hidden}.hero-copy{padding:75px 0}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;color:#687668;margin:0 0 22px}.hero .eyebrow span{display:inline-block;width:23px;height:1px;background:#b68b4c;vertical-align:middle;margin-right:9px}.hero h1,.section h2,.intro-band h2,.closing h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,5.5vw,78px);line-height:1.02;letter-spacing:-.045em;margin:0}.hero h1 i,.section h2 i,.intro-band h2 i,.closing h2 i{font-weight:400;color:#74836f}.hero-intro{font-size:15px;max-width:450px;color:#656d65;line-height:1.85;margin:25px 0 30px}.motto-lockup{display:flex;align-items:center;gap:13px;margin:0 0 28px;padding:14px 16px;max-width:360px;background:#e8ebe2;border-left:2px solid #b68b4c}.motto-mark{font-size:21px;color:#a77e43}.motto-lockup strong{display:block;font-size:11px;letter-spacing:.12em;color:var(--green)}.motto-lockup small{display:block;font-size:10px;color:var(--muted);margin-top:2px}.hero-actions{display:flex;align-items:center;gap:27px}.button{display:inline-flex;align-items:center;justify-content:center;gap:24px;border:0;padding:15px 19px;border-radius:3px;font-size:12px;font-weight:750;cursor:pointer;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.button-dark{background:var(--green);color:white}.button-light{background:#f8f5ed;color:var(--ink)}.text-link{font-size:12px;font-weight:750}.hero-footnote{margin-top:57px;font-size:11px;color:var(--muted)}.tiny-cross{font-size:18px;color:#b88d4e;margin-right:10px}.hero-art{position:relative;height:470px;background:#e3e7dc;overflow:hidden;border-radius:48% 48% 4px 4px;align-self:end}.sun{position:absolute;top:60px;left:calc(50% - 82px);width:164px;height:164px;border-radius:50%;background:#d8b77e}.arch{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);border-radius:48% 48% 0 0}.arch-back{height:300px;width:65%;background:#a8b5a1}.arch-front{height:230px;width:43%;background:#526a58;box-shadow:inset 0 0 0 1px #ffffff20}.art-caption{position:absolute;bottom:21px;left:22px;right:22px;display:flex;justify-content:space-between;color:#f7f5ed;font-size:8px;letter-spacing:.12em;font-weight:700}.intro-band{text-align:center;background:#e9ebe3;padding:74px 20px}.intro-band h2{font-size:clamp(34px,4vw,49px)}.intro-band>p:last-child{max-width:510px;margin:20px auto 0;color:var(--muted);font-size:13px}.section{padding:100px 6vw}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:45px;margin-bottom:42px}.section-heading h2,.checkin-aside h2,.prayer-copy h2{font-size:clamp(40px,4.6vw,59px)}.section-heading>p{max-width:365px;color:var(--muted);font-size:12px;line-height:1.9;margin:0 0 5px}.campus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.campus-card{position:relative;background:var(--white);border:1px solid var(--line);padding:29px 26px 24px;min-height:285px;display:flex;flex-direction:column}.campus-card.featured{background:#e6e9df;border-color:#d3dbce}.campus-number{font-size:10px;letter-spacing:.1em;color:#7a8378}.campus-icon{position:absolute;right:24px;top:21px;color:#71816f;font-size:21px}.campus-card h3{font-family:var(--serif);font-weight:400;font-size:28px;margin:28px 0 4px}.address{font-size:11px;color:var(--muted);margin:0 0 25px}.times{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:5px;margin-top:auto}.times span{font-size:10px;color:var(--muted)}.times strong{font-size:12px;font-weight:750}.campus-card>a{display:flex;justify-content:space-between;margin-top:23px;font-size:11px;font-weight:750}.source-note{font-size:10px;color:#7c8178;margin-top:17px}.checkin-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw;background:#e7ebe2;align-items:center}.checkin-aside>p:not(.eyebrow){color:var(--muted);font-size:13px;line-height:1.9;max-width:330px;margin-top:22px}.handwritten{font-family:var(--serif);font-style:italic;color:#758572;font-size:19px;margin-top:40px;transform:rotate(-4deg)}.checkin-panel{background:var(--white);padding:32px;border:1px solid #daddd3;box-shadow:0 16px 40px #34452d0a}.panel-top{display:flex;justify-content:space-between;gap:12px;font-size:8px;letter-spacing:.13em;font-weight:800;color:#778174;border-bottom:1px solid var(--line);padding-bottom:18px}.panel-question{font-family:var(--serif);font-size:22px;margin:23px 0 19px}.feeling-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.feeling{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:transparent;text-align:left;padding:13px 10px;font-size:11px;border-radius:3px;cursor:pointer;color:var(--ink)}.feeling span{font-size:18px;color:#7a8b75}.feeling:hover,.feeling.selected{border-color:#748b72;background:#e8eee4}.encouragement{margin-top:20px;background:#f0f2ec;padding:17px;display:flex;gap:13px;align-items:flex-start;min-height:83px}.encouragement-icon{color:#7d8d76;font-size:19px}.encouragement p{font-size:12px;color:#5f685e;line-height:1.8;margin:0}.encouragement strong{color:#34483a}.reset-button{margin-top:13px;border:0;background:transparent;color:#758071;font-size:10px;text-decoration:underline;cursor:pointer;padding:0}.prayer-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw;align-items:center}.prayer-visual{min-height:390px;background:#d9dfd3;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}.prayer-orbit{position:absolute;border:1px solid #8b9b84;border-radius:50%;width:300px;height:300px}.orbit-two{width:220px;height:220px;border-color:#b1bba8}.prayer-cross{font-family:var(--serif);font-size:85px;color:#526b56;z-index:1}.prayer-visual>p{position:absolute;bottom:20px;left:23px;font-size:8px;letter-spacing:.13em;line-height:1.8;color:#536451}.prayer-copy>p:not(.eyebrow){font-size:12px;line-height:1.9;color:var(--muted);max-width:410px}.prayer-copy form{margin-top:27px}.prayer-copy label{display:block;font-size:11px;font-weight:750;margin:17px 0 8px}.prayer-copy label span{color:var(--muted);font-weight:400}.prayer-copy select,.prayer-copy textarea{width:100%;border:1px solid var(--line);border-radius:3px;background:var(--white);padding:12px;color:var(--ink);font-size:12px}.prayer-copy textarea{resize:vertical;min-height:100px}.form-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:13px}.form-bottom>span{font-size:10px;color:var(--muted)}.form-disclaimer{font-size:9px!important;color:#7d8278!important}.prayer-result{margin-top:16px;padding:17px;background:#e8eee4;border:1px solid #ccd7c7;font-size:12px;line-height:1.8}.ministries-section{background:#283a30;color:#f6f4ec}.ministries-section .eyebrow{color:#bdc9b8}.ministries-section .section-heading>p{color:#c2c9be}.ministries-section h2 i{color:#c1cbb8}.ministry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.ministry-card{position:relative;min-height:255px;border:1px solid #526255;padding:26px 25px;transition:background .2s}.ministry-card:hover{background:#344a3a}.ministry-symbol{font-family:var(--serif);font-size:26px;color:#d6b77f}.ministry-index{display:block;font-size:8px;letter-spacing:.14em;color:#b5c1b0;margin-top:22px}.ministry-card h3{font-family:var(--serif);font-size:27px;font-weight:400;margin:10px 0}.ministry-card p{font-size:11px;line-height:1.8;color:#c2c9be;max-width:230px}.card-arrow{position:absolute;right:24px;bottom:22px;color:#d7b77d}.official-link{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:42px;padding:27px;background:#354a3b}.official-link .eyebrow{margin-bottom:8px}.official-link h3{font-family:var(--serif);font-size:24px;font-weight:400;margin:0}.official-link p:last-child{font-size:11px;color:#c6cdc2;margin-bottom:0}.closing{text-align:center;padding:100px 20px 90px}.closing-star{font-size:27px;color:#b38b50}.closing .eyebrow{margin:18px 0 21px}.closing h2{font-size:clamp(45px,6vw,68px)}.closing-support{color:var(--muted);font-size:13px;margin:20px auto 0}.closing .text-link{display:inline-block;margin-top:28px}.site-footer{border-top:1px solid var(--line);padding:30px 6vw;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:30px}.footer-brand .brand-mark{width:33px;height:33px;font-size:20px}.site-footer>p{font-size:9px;line-height:1.7;color:var(--muted);max-width:390px;margin:0}.site-footer>a:last-child{font-size:10px;font-weight:750}
+@media(max-width:900px){.site-header{padding:0 4vw}.nav-links{gap:14px}.hero,.section{padding-left:4vw;padding-right:4vw}.hero{gap:3vw}.hero-art{height:400px}.section-heading{align-items:start;flex-direction:column;gap:18px}.checkin-section,.prayer-section{gap:5vw}.site-footer{padding:28px 4vw;grid-template-columns:1fr 1fr}.site-footer>p{grid-column:1/-1;grid-row:2}.site-footer>a:last-child{justify-self:end}}
+@media(max-width:680px){.notice{font-size:8px}.site-header{height:72px;position:relative}.menu-toggle{display:block;font-size:11px}.menu-toggle span{margin-left:7px}.nav-links{display:none;position:absolute;z-index:5;top:71px;left:0;right:0;padding:17px 5vw 22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:13px 0}.nav-links .nav-cta{padding:12px;margin-top:7px;text-align:center}.hero{grid-template-columns:1fr;padding-top:15px}.hero-copy{padding:55px 0 25px}.hero h1{font-size:54px}.hero-art{height:320px;width:88%;justify-self:center;align-self:auto}.hero-footnote{margin-top:34px}.intro-band{padding:57px 20px}.section{padding:70px 5vw}.campus-grid,.ministry-grid{grid-template-columns:1fr}.campus-card{min-height:255px}.checkin-section,.prayer-section{grid-template-columns:1fr;gap:35px}.checkin-panel{padding:20px}.feeling-grid{grid-template-columns:repeat(2,1fr)}.panel-top{font-size:7px}.prayer-visual{min-height:280px}.official-link{align-items:flex-start;flex-direction:column}.site-footer{grid-template-columns:1fr;gap:18px}.site-footer>p{grid-column:auto;grid-row:auto}.site-footer>a:last-child{justify-self:start}.section-heading h2,.checkin-aside h2,.prayer-copy h2{font-size:46px}.hero-actions{gap:18px}.button{padding:14px}.form-bottom{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="notice"><span class="notice-dot"></span> UNOFFICIAL CONCEPT PROTOTYPE · NOT AN OFFICIAL TWC WEBSITE</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="TWC Connect home">
+      <span class="brand-mark">T</span>
+      <span><strong>TWC <em>CONNECT</em></strong><small>A digital front door concept</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu <span>☰</span></button>
+    <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+      <a href="#visit">Plan a visit</a><a href="#checkin">How are you?</a><a href="#prayer">Prayer</a><a href="#ministries">Connect</a>
+      <a class="nav-cta" href="https://www.wearetwc.com/" target="_blank" rel="noopener">Official TWC site ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A CONCEPT FOR THE WORSHIP CENTER</p>
+        <h1>Faith is personal.<br><i>Connection</i> matters.</h1>
+        <p class="hero-intro">A welcoming place to find your next step — whether you're planning your first visit, looking for community, or simply taking a moment to check in.</p>
+        <div class="motto-lockup"><span class="motto-mark">✳</span><div><strong>DON'T DO LIFE ALONE.</strong><small>Connection matters. You belong in community.</small></div></div>
+        <div class="hero-actions"><a class="button button-dark" href="#visit">Find your campus <span>↗</span></a><a class="text-link" href="#checkin">Take a moment <span>↓</span></a></div>
+        <div class="hero-footnote"><span class="tiny-cross">✳</span> Come as you are. Explore at your own pace.</div>
+      </div>
+      <div class="hero-art" aria-label="Decorative abstract illustration">
+        <div class="sun"></div><div class="arch arch-back"></div><div class="arch arch-front"></div>
+        <div class="art-caption"><span>01 / WELCOME</span><span>YOU BELONG IN COMMUNITY</span></div>
+      </div>
+    </section>
+
+    <section class="intro-band">
+      <p class="eyebrow">MORE THAN A HOMEPAGE</p>
+      <h2>A small moment of connection<br>can be a meaningful first step.</h2>
+      <p>This concept brings practical church information together with thoughtful ways to connect, reflect, and ask for prayer.</p>
+    </section>
+
+    <section id="visit" class="section visit-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / PLAN YOUR VISIT</p><h2>Find your <i>place.</i></h2></div>
+        <p>Choose a campus to see the Sunday times currently listed on TWC's official website. Please confirm details on the official site before traveling.</p>
+      </div>
+      <div class="campus-grid">
+        <article class="campus-card">
+          <div class="campus-number">01</div><div class="campus-icon">↗</div>
+          <h3>West Campus</h3><p class="address">7116 82nd St · Lubbock, TX</p>
+          <div class="times"><span>Sunday services</span><strong>9:00 AM · 11:00 AM · 1:00 PM</strong></div>
+          <a href="https://www.wearetwc.com/west" target="_blank" rel="noopener">Campus details <span>↗</span></a>
+        </article>
+        <article class="campus-card featured">
+          <div class="campus-number">02</div><div class="campus-icon">↗</div>
+          <h3>South Campus</h3><p class="address">12701 Indiana Ave · Lubbock, TX</p>
+          <div class="times"><span>Sunday services</span><strong>9:00 AM · 11:00 AM</strong></div>
+          <a href="https://www.wearetwc.com/south" target="_blank" rel="noopener">Campus details <span>↗</span></a>
+        </article>
+        <article class="campus-card">
+          <div class="campus-number">03</div><div class="campus-icon">↗</div>
+          <h3>Brownfield Campus</h3><p class="address">1202 Seagraves Hwy · Brownfield, TX</p>
+          <div class="times"><span>Sunday services</span><strong>9:30 AM · 11:30 AM</strong></div>
+          <a href="https://www.wearetwc.com/" target="_blank" rel="noopener">Official website <span>↗</span></a>
+        </article>
+      </div>
+      <p class="source-note">Campus information is based on publicly listed details from wearetwc.com and is included for demonstration. TWC should verify all content before any public launch.</p>
+    </section>
+
+    <section id="checkin" class="section checkin-section">
+      <div class="checkin-aside"><p class="eyebrow">02 / TAKE A MOMENT</p><h2>How are you<br>doing <i>today?</i></h2><p>No perfect answer needed. Choose what feels closest, then explore a little encouragement. Your choice stays in this demo page and is not sent anywhere.</p><div class="handwritten">One moment at a time. ↘</div></div>
+      <div class="checkin-panel">
+        <div class="panel-top"><span>YOUR CHECK-IN</span><span>OPTIONAL · PRIVATE DEMO</span></div>
+        <p class="panel-question">What best describes how you feel right now?</p>
+        <div class="feeling-grid" id="feelingGrid">
+          <button class="feeling" data-feeling="hopeful"><span>☀</span>Hopeful</button>
+          <button class="feeling" data-feeling="peaceful"><span>⌁</span>At peace</button>
+          <button class="feeling" data-feeling="overwhelmed"><span>☁</span>Overwhelmed</button>
+          <button class="feeling" data-feeling="lonely"><span>☾</span>Lonely</button>
+          <button class="feeling" data-feeling="anxious"><span>≈</span>Anxious</button>
+          <button class="feeling" data-feeling="grateful"><span>✳</span>Grateful</button>
+        </div>
+        <div id="encouragement" class="encouragement" aria-live="polite">
+          <div class="encouragement-icon">✳</div><p>Choose a feeling above to receive a gentle reflection and a possible next step.</p>
+        </div>
+        <button id="resetFeeling" class="reset-button" type="button">Reset check-in ↺</button>
+      </div>
+    </section>
+
+    <section id="prayer" class="section prayer-section">
+      <div class="prayer-visual"><div class="prayer-orbit orbit-one"></div><div class="prayer-orbit orbit-two"></div><div class="prayer-cross">✝</div><p>YOU DON'T HAVE TO FIND<br>THE WORDS PERFECTLY.</p></div>
+      <div class="prayer-copy"><p class="eyebrow">03 / PRAYER & SUPPORT</p><h2>What's on<br>your <i>heart?</i></h2><p>Use this demonstration form to preview a potential prayer-request experience. Nothing you type is transmitted, saved, or sent to TWC.</p>
+        <form id="prayerForm">
+          <label for="requestType">What would you like to share?</label>
+          <select id="requestType"><option>Prayer for me</option><option>Prayer for someone I care about</option><option>Gratitude / praise</option><option>I'd like someone to contact me</option></select>
+          <label for="prayerText">Your request <span>(optional)</span></label>
+          <textarea id="prayerText" rows="4" maxlength="500" placeholder="Write a few words here… This is a local demo only."></textarea>
+          <div class="form-bottom"><span id="charCount">0 / 500</span><button class="button button-dark" type="submit">Preview request <span>↗</span></button></div>
+          <p class="form-disclaimer">Demo only. Please don't enter real names, contact details, or sensitive personal information.</p>
+        </form>
+        <div id="prayerResult" class="prayer-result" role="status" hidden></div>
+      </div>
+    </section>
+
+    <section id="ministries" class="section ministries-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">04 / FIND YOUR NEXT STEP</p><h2>Connection looks<br><i>different for everyone.</i></h2></div>
+        <p>TWC's official website and Church Center resources remain the source for current groups, events, and ministry information. These cards are sample pathways for this concept.</p>
+      </div>
+      <div class="ministry-grid">
+        <a class="ministry-card" href="https://www.wearetwc.com/" target="_blank" rel="noopener"><span class="ministry-symbol">✳</span><span class="ministry-index">01 / GROW</span><h3>Grow in faith</h3><p>Explore teaching, sermons, and opportunities to keep learning.</p><span class="card-arrow">↗</span></a>
+        <a class="ministry-card" href="https://www.wearetwc.com/" target="_blank" rel="noopener"><span class="ministry-symbol">⌂</span><span class="ministry-index">02 / COMMUNITY</span><h3>Find community</h3><p>Discover how to connect with groups and people at TWC.</p><span class="card-arrow">↗</span></a>
+        <a class="ministry-card" href="https://www.wearetwc.com/" target="_blank" rel="noopener"><span class="ministry-symbol">♡</span><span class="ministry-index">03 / SERVE</span><h3>Use your gifts</h3><p>Learn about serving and ways to contribute to church life.</p><span class="card-arrow">↗</span></a>
+      </div>
+      <div class="official-link"><div><p class="eyebrow">KEEP EXPLORING</p><h3>Looking for official TWC information?</h3><p>Visit the current church website for verified updates, events, and next steps.</p></div><a class="button button-light" href="https://www.wearetwc.com/" target="_blank" rel="noopener">Visit official TWC ↗</a></div>
+    </section>
+
+    <section class="closing">
+      <span class="closing-star">✳</span><p class="eyebrow">A CONCEPT BUILT AROUND CONNECTION</p><h2>Don't do life<br><i>alone.</i></h2><p class="closing-support">A small step toward connection can make a difference.</p><a href="#home" class="text-link">Back to top ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">T</span><span><strong>TWC <em>CONNECT</em></strong><small>Concept prototype</small></span></a><p>This is an independent, unofficial prototype for discussion. It is not operated, endorsed, or approved by The Worship Center. No forms submit or store data.</p><a href="https://www.wearetwc.com/" target="_blank" rel="noopener">Official TWC website ↗</a></footer>
+  <script>
+const feelingData = {
+  hopeful: {
+    title: "Make room for hope.",
+    verse: "“May the God of hope fill you with all joy and peace…” — Romans 15:13",
+    next: "Consider one small next step today, or explore a TWC group or gathering when you're ready."
+  },
+  peaceful: {
+    title: "Pause and receive this moment.",
+    verse: "“Peace I leave with you; my peace I give you.” — John 14:27",
+    next: "You might take a quiet moment for gratitude or share what is helping you feel grounded."
+  },
+  overwhelmed: {
+    title: "You can take this one step at a time.",
+    verse: "“Cast all your anxiety on him because he cares for you.” — 1 Peter 5:7",
+    next: "You don't have to solve everything at once. Consider talking with someone you trust or asking the church about pastoral support."
+  },
+  lonely: {
+    title: "You deserve care and connection.",
+    verse: "“I am with you always.” — Matthew 28:20",
+    next: "When you're ready, explore community opportunities or reach out to someone you trust. A website can be a first step toward real connection."
+  },
+  anxious: {
+    title: "Give yourself permission to slow down.",
+    verse: "“Do not be anxious about anything…” — Philippians 4:6",
+    next: "Try a gentle pause and consider sharing what you're carrying with a trusted person. You don't have to find every answer right now."
+  },
+  grateful: {
+    title: "Let gratitude have a little space.",
+    verse: "“Give thanks to the Lord, for he is good.” — Psalm 107:1",
+    next: "You could write down one thing you're thankful for or share that gratitude with someone."
+  }
+};
+
+const feelingGrid = document.getElementById("feelingGrid");
+const encouragement = document.getElementById("encouragement");
+const resetFeeling = document.getElementById("resetFeeling");
+
+feelingGrid.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-feeling]");
+  if (!button) return;
+  const data = feelingData[button.dataset.feeling];
+  feelingGrid.querySelectorAll(".feeling").forEach((item) => {
+    item.classList.toggle("selected", item === button);
+    item.setAttribute("aria-pressed", item === button ? "true" : "false");
+  });
+  encouragement.replaceChildren();
+  const icon = document.createElement("div");
+  icon.className = "encouragement-icon";
+  icon.textContent = "✳";
+  const content = document.createElement("div");
+  const title = document.createElement("strong");
+  title.textContent = data.title;
+  const verse = document.createElement("p");
+  verse.textContent = data.verse;
+  verse.style.marginTop = "6px";
+  const next = document.createElement("p");
+  next.textContent = data.next;
+  next.style.marginTop = "8px";
+  content.append(title, verse, next);
+  encouragement.append(icon, content);
+});
+
+resetFeeling.addEventListener("click", () => {
+  feelingGrid.querySelectorAll(".feeling").forEach((item) => {
+    item.classList.remove("selected");
+    item.setAttribute("aria-pressed", "false");
+  });
+  encouragement.replaceChildren();
+  const icon = document.createElement("div");
+  icon.className = "encouragement-icon";
+  icon.textContent = "✳";
+  const message = document.createElement("p");
+  message.textContent = "Choose a feeling above to receive a gentle reflection and a possible next step.";
+  encouragement.append(icon, message);
+});
+
+const prayerText = document.getElementById("prayerText");
+const charCount = document.getElementById("charCount");
+const prayerForm = document.getElementById("prayerForm");
+const prayerResult = document.getElementById("prayerResult");
+
+prayerText.addEventListener("input", () => {
+  charCount.textContent = `${prayerText.value.length} / 500`;
+});
+
+prayerForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const type = document.getElementById("requestType").value;
+  const preview = prayerText.value.trim();
+  prayerResult.replaceChildren();
+  const heading = document.createElement("strong");
+  heading.textContent = "Demo preview only — nothing was sent.";
+  const detail = document.createElement("p");
+  detail.textContent = `Request type: ${type}.`;
+  const body = document.createElement("p");
+  body.textContent = preview ? `Preview text: “${preview}”` : "No request text was entered.";
+  const reminder = document.createElement("p");
+  reminder.textContent = "This prototype does not store or transmit your information. A real prayer form would need TWC approval, a designated recipient, and a reviewed privacy process.";
+  prayerResult.append(heading, detail, body, reminder);
+  prayerResult.hidden = false;
+});
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+}));
+
+</script>
+</body>
+</html>
